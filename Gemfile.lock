@@ -1,7 +1,11 @@
+PATH
+  remote: /Users/eberry/Projects/open_source/pro_motion
+  specs:
+    ProMotion (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    ProMotion (0.2.0)
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
@@ -44,5 +48,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ProMotion
+  ProMotion!
   motion-cocoapods

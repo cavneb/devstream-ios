@@ -1,4 +1,9 @@
 class PostsScreen < ProMotion::Screen
+
+  def on_opened
+    set_tab_bar_item title: "Contributors", icon: "newspaper.png"
+  end
+
   def will_appear
     self.view.backgroundColor = UIColor.darkGrayColor
     add_element UILabel.alloc.initWithFrame(CGRectMake(25, 50, 275, 150)), {
