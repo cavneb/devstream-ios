@@ -1,0 +1,15 @@
+[
+    {
+        "title": "Transferring Files with Net::SCP with feedback",
+        "html_url": "http://localhost:3000/posts/transferring-files-with-net-scp-with-feedback",
+        "json_url": "http://localhost:3000/posts/transferring-files-with-net-scp-with-feedback.json",
+        "slug": "transferring-files-with-net-scp-with-feedback",
+        "date": "2012-11-08T15:14:10Z",
+        "contributor": {
+            "username": "cavneb",
+            "gravatar_image": "http://gravatar.com/avatar/469f88e0c2d6e73916b567f389987301",
+            "html_url": "http://localhost:3000/contributors/cavneb",
+            "json_url": "http://localhost:3000/contributors/cavneb.json"
+        }
+    }
+]

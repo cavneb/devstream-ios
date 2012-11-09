@@ -1,0 +1,15 @@
+[
+    {
+        "username": "cavneb",
+        "email": "cavneb@gmail.com",
+        "name": "Eric Berry",
+        "location": "Lehi, Utah",
+        "bio": "He was a co-founder of ShareAPhoto, Ltd which was [acquired by Hewlett-Packard in 2006](http://h20338.www2.hp.com/enterprise/cache/504707-0-0-225-121.html). Over the past four years, Eric has focused on learning as much about agile web development as possible, including Ruby on Rails and Grails with Groovy. Eric is the author of [Rails Pocket Reference](http://oreilly.com/catalog/9780596520700/) (published 2008 – O'Reilly). He also spear-headed [TeachMeToCode.com](http://www.teachmetocode.com/), a popular on-demand screencasting website dedicated to helping others learn how to program, which includes a popular series on [writing a Twitter clone with Rails](http://teachmetocode.com/tag/twitter/). Eric has designed and developed enterprise solutions such as [Reservation Counter](http://www.reservationcounter.com/), an online hotel booking engine, and most recently [Crop Chocolate](http://www.cropchocolate.com/), a 'deal of the day' site which is focused on scrapbooking supplies.\r\n\r\nEric spends most of his free time with his amazing little boy, Markie, and his beautiful wife, Amber.",
+        "blog": "http://coderberry.me",
+        "github": "http://github.com/cavneb",
+        "number_of_posts": 1,
+        "html_url": "http://localhost:3000/contributors/cavneb",
+        "json_url": "http://localhost:3000/contributors/cavneb.json",
+        "gravatar_image": "http://gravatar.com/avatar/469f88e0c2d6e73916b567f389987301"
+    }
+]

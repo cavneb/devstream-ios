@@ -1,0 +1,25 @@
+{
+    "title": "Transferring Files with Net::SCP with feedback",
+    "html_url": "http://localhost:3000/posts/transferring-files-with-net-scp-with-feedback",
+    "json_url": "http://localhost:3000/posts/transferring-files-with-net-scp-with-feedback.json",
+    "slug": "transferring-files-with-net-scp-with-feedback",
+    "date": "2012-11-08T15:14:10Z",
+    "body": {
+        "markdown": "I found a [blog article](http://ruby.about.com/od/ssh/ss/netscp_4.htm) which shows how to display progress using the ruby's net/scp.\r\n\r\nThere are also alternatives. See [https://gist.github.com/3784077](https://gist.github.com/3784077)\r\n\r\n    #!/usr/bin/env ruby\r\n    require 'rubygems'\r\n    require 'net/ssh'\r\n    require 'net/scp'\r\n\r\n    hostname = '192.168.1.113'\r\n    username = 'user\r\n    password = 'pass\r\n\r\n    Net::SSH.start( hostname, username, :password => password ) do |ssh|\r\n      ssh.scp.upload!( 'large.zip', '.' ) do |ch, name, sent, total|\r\n        print \"\\r#{name}: #{(sent.to_f * 100 / total.to_f).to_i}%\"\r\n      end\r\n    end",
+        "html": "<p>I found a <a href=\"http://ruby.about.com/od/ssh/ss/netscp_4.htm\">blog article</a> which shows how to display progress using the ruby's net/scp.</p>\n\n<p>There are also alternatives. See <a href=\"https://gist.github.com/3784077\">https://gist.github.com/3784077</a></p>\n\n<pre><code>#!/usr/bin/env ruby\nrequire 'rubygems'\nrequire 'net/ssh'\nrequire 'net/scp'\n\nhostname = '192.168.1.113'\nusername = 'user\npassword = 'pass\n\nNet::SSH.start( hostname, username, :password =&gt; password ) do |ssh|\n  ssh.scp.upload!( 'large.zip', '.' ) do |ch, name, sent, total|\n    print \"\\r#{name}: #{(sent.to_f * 100 / total.to_f).to_i}%\"\n  end\nend\n</code></pre>"
+    },
+    "tags": [
+        "concurrency",
+        "video",
+        "sublime text 2",
+        "screencast",
+        "rubymotion",
+        "iOS",
+        "RubyConf",
+        "tools",
+        "technique",
+        "ruby",
+        "scp",
+        "tips"
+    ]
+}

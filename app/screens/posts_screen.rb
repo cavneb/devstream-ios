@@ -1,23 +1,30 @@
-class PostsScreen < ProMotion::Screen
+class PostsScreen < ProMotion::TableScreen
+  title "Recent Posts"
+  # searchable placeholder: "Search Posts"
 
   def on_opened
-    set_tab_bar_item title: "Contributors", icon: "newspaper.png"
+    set_tab_bar_item title: "Posts", icon: "newspaper.png"
   end
 
   def will_appear
+    set_nav_bar_right_button "Reload", action: :pull_remote_posts, type: UIBarButtonItemStyleDone
     self.view.backgroundColor = UIColor.darkGrayColor
-    add_element UILabel.alloc.initWithFrame(CGRectMake(25, 50, 275, 150)), {
-      text: "ProMotion is a new way to easily organize and develop RubyMotion apps using the concept of screens.",
-      borderStyle: UITextBorderStyleRoundedRect,
-      backgroundColor: UIColor.whiteColor,
-      font: UIFont.systemFontOfSize(14),
-      numberOfLines: 0,
-      lineBreakMode: UILineBreakModeWordWrap,
-      layer: {
-        borderWidth: 5,
-        cornerRadius: 15,
-        borderColor: UIColor.grayColor
-      }
-    }
+    
+  end
+
+  def table_data
+    @posts = [{ title: 'foo', action: :open_article }]
+    [{ cells: @posts }]
+  end
+
+  def pull_remote_posts
+    @posts = []
+    BW::HTTP.get("http://localhost:3000/posts.json") do |response|
+      result_data = BW::JSON.parse(response.body.to_str)
+      result_data.each do |post_hash|
+        post = Post.new(post_hash)
+        @posts << { title: post.title, action: :open_article }
+      end
+    end
   end
 end
